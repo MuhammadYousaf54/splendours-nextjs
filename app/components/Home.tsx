@@ -99,8 +99,8 @@ const Home = () => {
                     <Magnifier
                         src="Bluestone-Magnifier.jpg" // Replace with your texture image path
                         alt="Texture"
-                        width={400}
-                        height={300}
+                        width={100}
+                        height={100}
                         // style={{ width: '100%', height: 'auto' }}
                         // className="glass"
                         zoom={3} // Adjust the zoom level as needed

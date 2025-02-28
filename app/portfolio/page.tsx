@@ -8,7 +8,7 @@ import { useMediaQuery } from 'react-responsive';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import './embla.css';
-import {motion} from 'framer-motion';
+// import {motion} from 'framer-motion';
 import { Box, Typography } from '@mui/material';
 import Image from 'next/image';
 

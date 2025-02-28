@@ -476,8 +476,8 @@ const ServicesPage = () => {
                                 <Image
                                     src="/images/Service/products/Vector-bottom-right.svg"
                                     alt="main"
-                                    width={110}
-                                    height={110}
+                                    width={100}
+                                    height={100}
                                 />
                             </Box>
                         </Box>
@@ -1765,8 +1765,8 @@ const ServicesPage = () => {
                                 // layout="fill"
                                 objectFit="cover"
                                 className="w-[75%]"
-                                width={600}
-                                height={600}
+                                width={200}
+                                height={200}
                             />
                         </Box>
                         <Box className="absolute z-10 text-center w-full flex flex-col items-center justify-center gap-y-8 mt-[-100px]">
@@ -1816,7 +1816,6 @@ const ServicesPage = () => {
                             <Image
                                 src="/images/Service/partner.svg" // Ensure this image is in the public/images folder
                                 alt="Background"
-                                // layout="fill"
                                 objectFit="cover"
                                 className="opacity-100"
                                 width={800}

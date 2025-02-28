@@ -4,8 +4,7 @@ import * as React from "react";
 
 import { useMotionTemplate, useMotionValue, motion } from "framer-motion";
 
-export interface TextareaProps
-  extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {}
+type TextareaProps= React.TextareaHTMLAttributes<HTMLTextAreaElement> 
 
 const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
   ({ className, ...props }, ref) => {
@@ -15,7 +14,8 @@ const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
     const mouseX = useMotionValue(0);
     const mouseY = useMotionValue(0);
 
-    function handleMouseMove({ currentTarget, clientX, clientY }: any) {
+    function handleMouseMove(event: React.MouseEvent<HTMLDivElement,MouseEvent>) {
+       const {currentTarget, clientX, clientY } = event
       const { left, top } = currentTarget.getBoundingClientRect();
 
       mouseX.set(clientX - left);

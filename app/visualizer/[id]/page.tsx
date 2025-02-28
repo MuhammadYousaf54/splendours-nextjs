@@ -1,5 +1,5 @@
 'use client';
-import React, { useState, Suspense, useEffect } from 'react';
+import React, { useState, Suspense, useEffect, useMemo } from 'react';
 import { useRouter } from 'next/navigation';
 import { useMediaQuery } from 'react-responsive';
 import { useProgress } from '@react-three/drei';
@@ -187,18 +187,30 @@ const App = ({ params }: {
   const router = useRouter(); // Initialize useRouter here
   const id = params.id;
   // const models = ['/models/chimney.glb', '/models/house.glb'];
-  const models = ['/models/Chimney.glb', '/models/House.glb', '/models/Kitchen-Splashback.glb', '/models/Vertical-Wall-Bar.glb', '/models/Patios-Pergolas.glb', '/models/Bathroom.glb', '/models/Outside-Chimney.glb', '/models/Shower.glb', '/models/Entry-Wall.glb', '/models/Stones.glb'];
-
+ const models = useMemo(() => [
+    '/models/Chimney.glb',
+    '/models/House.glb',
+    '/models/Kitchen-Splashback.glb',
+    '/models/Vertical-Wall-Bar.glb',
+    '/models/Patios-Pergolas.glb',
+    '/models/Bathroom.glb',
+    '/models/Outside-Chimney.glb',
+    '/models/Shower.glb',
+    '/models/Entry-Wall.glb',
+    '/models/Stones.glb'
+  ], []); // Empty dependency array ensures it is only created once
+  
+  useEffect(() => {
+    const initialIndex = models.findIndex((model: string) => model.includes(id));
+    setCurrentModelIndex(initialIndex !== -1 ? initialIndex : 0); // Set to 0 if not found
+  }, [id, models]); 
   const modelImages = ["/images/modelImgs/Chimney.jpg", "/images/modelImgs/House.jpg", "/images/modelImgs/Kitchen-Splashback.jpg", "/images/modelImgs/Vertical-Wall-Bar.jpg", "/images/modelImgs/Patios-Pergolas.jpg", "/images/modelImgs/Bathroom.jpg", "/images/modelImgs/Outside-Chimney.jpg", "/images/modelImgs/Shower.jpg", "/images/modelImgs/Entry-Wall.jpg", "/images/modelImgs/Stones.jpg"]
 
 
   const [currentModelIndex, setCurrentModelIndex] = useState(0);
 
   // Find the initial index based on the provided id when the component mounts
-  useEffect(() => {
-    const initialIndex = models.findIndex((model) => model.includes(id));
-    setCurrentModelIndex(initialIndex !== -1 ? initialIndex : 0); // Set to 0 if not found
-  }, [id]);
+ 
 
   // Set state for each texture individuall
   const [name, setName] = useState<string>('BEACHPORT');

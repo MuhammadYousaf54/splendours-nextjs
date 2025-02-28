@@ -629,7 +629,7 @@ const HomePage = () => {
                             </Typography>
                             <Box>
                                 <Link href={'/allvisualizers'}>
-                                <LinkWrapper href="" previewImage="images/LinkhoverImages/allvisuallizer.png">
+                                <LinkWrapper href="" previewImage="/images/LinkhoverImages/allvisuallizer.png">
                                     <WhiteCustomButton label={'View all'} iconSrc={'/images/icons/Vector.svg'} />
                                     </LinkWrapper>
                                 </Link>
@@ -793,7 +793,7 @@ const HomePage = () => {
                     id="paving"
                     className="relative flex flex-col w-full px-10 md:px-20 py-10 md:py-20 gap-y-16 md:gap-y-24 rounded-[40px]"
                     sx={{
-                        backgroundImage: 'url(images/Home/PavingRange/background.jpg)',
+                        backgroundImage: 'url(/images/Home/PavingRange/background.jpg)',
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
                         backgroundRepeat: 'no-repeat',
@@ -823,7 +823,7 @@ const HomePage = () => {
                             </Box>
                             <Box className="mt-5">
                                 <Link href={'https://www.splendourinstone.com.au/paving/'} passHref>
-                                <LinkWrapper href="/" previewImage="images\LinkhoverImages/pavving.png">
+                                <LinkWrapper href="/" previewImage="/images/LinkhoverImages/pavving.png">
 
                                     <GreenCustomButton label={'View all'} iconSrc={'/images/icons/Vector.svg'} />
                                     </LinkWrapper>
@@ -856,26 +856,26 @@ const HomePage = () => {
                     <Box className="flex flex-col w-full gap-y-7">
                         <Box className="flex flex-col md:flex-row justify-between w-full gap-y-7 md:gap-x-7">
                             <Link href={`https://staging.splendourinstone.com.au/product/porphyry-cobble/`} className="w-full" passHref>
-                                <CustomWallCard product_image_src="images/Home/PavingRange/product1.png" product_subname="PORPHYRY" />
+                                <CustomWallCard product_image_src="/images/Home/PavingRange/product1.png" product_subname="PORPHYRY" />
                             </Link>
                             <Link href={`https://www.splendourinstone.com.au/product/ocean-grey-marble/`} className="w-full" passHref>
-                                <CustomWallCard product_image_src="images/Home/PavingRange/product2.png" product_subname="QUARTZITE" />
+                                <CustomWallCard product_image_src="/images/Home/PavingRange/product2.png" product_subname="QUARTZITE" />
                             </Link>
                             <Link href={`https://www.splendourinstone.com.au/product/ocean-grey-marble/`} className="w-full" passHref>
-                                <CustomWallCard product_image_src="images/Home/PavingRange/product3.png" product_subname="MARBLE" />
+                                <CustomWallCard product_image_src="/images/Home/PavingRange/product3.png" product_subname="MARBLE" />
                             </Link>
 
                         </Box>
                         <Box className="flex flex-col md:flex-row justify-between w-full gap-y-7 md:gap-x-7">
                            
                             <Link href={`https://staging.splendourinstone.com.au/product/limestone-sienna/`} className="w-full" passHref>
-                                <CustomWallCard product_image_src="images/Home/PavingRange/product4.png" product_subname="LIMESTONE" />
+                                <CustomWallCard product_image_src="/images/Home/PavingRange/product4.png" product_subname="LIMESTONE" />
                             </Link>
                             <Link href={`https://www.splendourinstone.com.au/product/granite-charcoal/`} className="w-full" passHref>
-                                <CustomWallCard product_image_src="images/Home/PavingRange/product5.png" product_subname="GRANITE" />
+                                <CustomWallCard product_image_src="/images/Home/PavingRange/product5.png" product_subname="GRANITE" />
                             </Link>
                             <Link href={`https://staging.splendourinstone.com.au/product/bluestone-sawn/`} className="w-full" passHref>
-                                <CustomWallCard product_image_src="images/Home/PavingRange/product6.png" product_subname="BLUESTONE" />
+                                <CustomWallCard product_image_src="/images/Home/PavingRange/product6.png" product_subname="BLUESTONE" />
                             </Link>
                            
                         </Box>

@@ -6,6 +6,7 @@ import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import Card3DEffect from "./3dEffects/Card3DEffect"; // Import the 3D card component
 import data from "./SplenderoursProductsData.json"; // Import your data
 import Link from "next/link";
+import Image from "next/image";
 
 interface Resource {
     product_name: string;
@@ -162,11 +163,13 @@ const SplenderoursProductsCarousel: React.FC = () => {
                                 className="z-0 block w-full h-full bg-left-top bg-no-repeat bg-cover aspect-square bg-origin-padding rounded-2xl"
                                 style={{ backgroundImage: `url(${resource.imageUrl || ""})  `  }}
                             >
-                                <img
+                                <Image
                                     src={resource.imageUrl || ""}
                                     alt={resource.product_name}
-                                    className="hidden w-full aspect-square rounded-2xl">
-                                </img>
+                                    height={325}
+                                     width={595}
+                                    className="hidden w-full aspect-square rounded-2xl"/>
+                                
                             </a>
                             <Box
                                 sx={{
@@ -218,10 +221,13 @@ const SplenderoursProductsCarousel: React.FC = () => {
 
                                 <Box className="flex flex-col justify-start w-full gap-y-2" style={{ padding: "20px" }}>
                                     <Box className="w-1/3">
-                                        <img
+                                        <Image
                                             src={resource.subImageUrl || ""}
-                                            alt={resource.product_subname}>
-                                        </img>
+                                            alt={resource.product_subname}
+                                            height={420}
+                                            width={595}
+                                            />
+                                       
                                     </Box>
                                     {/* <Image
                                         src={resource.subImageUrl || ""}

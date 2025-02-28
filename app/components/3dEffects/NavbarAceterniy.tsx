@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { ReactNode, useState } from "react";
 
 
 
@@ -21,7 +21,7 @@ export default  function NavBarAceternity({ className }: { className?: string })
     
         <MenuItem setActive={setActive} active={active} item="Services">
           <div className="flex flex-col space-y-4 text-sm">
-            <HoveredLink href="/projects">Projects</HoveredLink>
+            <HoveredLink href="/portfolio">Projects</HoveredLink>
             <HoveredLink href="/services">Our Service</HoveredLink>
             <HoveredLink href="/portfolio">Portfolio</HoveredLink>
             <HoveredLink href="/gallery">Gallery</HoveredLink>
@@ -67,7 +67,7 @@ export default  function NavBarAceternity({ className }: { className?: string })
           <div className="flex flex-col space-y-4 text-sm">
           <HoveredLink href="/faq">FAQ</HoveredLink>
           <HoveredLink href="/contact">Contact</HoveredLink>
-          <HoveredLink href="/blog">Blog</HoveredLink>
+          <HoveredLink href="/">Blog</HoveredLink>
           </div>
         </MenuItem>
       </Menu>
@@ -76,7 +76,7 @@ export default  function NavBarAceternity({ className }: { className?: string })
 }
 
 import { motion } from "framer-motion";
-import Link from "next/link";
+import Link,{LinkProps} from "next/link";
 import Image from "next/image";
 
 const transition = {
@@ -184,7 +184,11 @@ export const ProductItem = ({
   );
 };
 
-export const HoveredLink = ({ children, ...rest }: any) => {
+interface HoveredLinkProps extends LinkProps {
+  children: ReactNode;
+  className?: string;
+}
+export const HoveredLink = ({ children, ...rest }:  HoveredLinkProps) => {
   return (
     <Link
       {...rest}

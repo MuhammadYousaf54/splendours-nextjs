@@ -1,19 +1,19 @@
 'use client'
-import React, { useState } from 'react'
-import { Box, Typography } from '@mui/material'
+import React from 'react'
+import { Box } from '@mui/material'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useMediaQuery } from '@mui/material'
 import NavbarMenu from './3dEffects/NavbarMenu' // Import the NavbarMenu component
 import NavbarAceternity from './3dEffects/NavbarAceterniy'
 const Header: React.FC = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false)
+    // const [isMenuOpen, setIsMenuOpen] = useState(false)
     const isMobile = useMediaQuery('(max-width: 768px)') // Media query for mobile
     const isTablet = useMediaQuery('(min-width: 769px) and (max-width: 1024px)')
 
-    const handleMenuToggle = () => {
-        setIsMenuOpen(!isMenuOpen)
-    }
+    // const handleMenuToggle = () => {
+    //     setIsMenuOpen(!isMenuOpen)
+    // }
 
     return (
         <Box className="flex items-center justify-between w-full h-full sm:px-[4vw] md:px-[4vw] lg:px-[4vw]">
