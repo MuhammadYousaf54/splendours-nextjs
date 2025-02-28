@@ -2,11 +2,10 @@
 
 import * as React from "react";
 import { useMotionTemplate, useMotionValue, motion } from "framer-motion";
+import { ClassValue, clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
 
-export interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {}
-
-const ButtonHover = React.forwardRef<HTMLButtonElement, ButtonProps>(
+const ButtonHover = React.forwardRef<HTMLButtonElement, React.ButtonHTMLAttributes<HTMLButtonElement>>(
   ({ className, children, ...props }, ref) => {
     const radius = 120; // Increased for a smoother effect
     const [visible, setVisible] = React.useState(false);
@@ -58,8 +57,6 @@ const ButtonHover = React.forwardRef<HTMLButtonElement, ButtonProps>(
 ButtonHover.displayName = "ButtonHover";
 
 export { ButtonHover };
-import { ClassValue, clsx } from "clsx";
-import { twMerge } from "tailwind-merge";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
