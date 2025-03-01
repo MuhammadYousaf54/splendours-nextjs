@@ -643,9 +643,10 @@ const HomePage = () => {
                     :
                     <Box className="w-full flex flex-col aspect-[3.77/1] min-w-1 bg-[#DBC6BC] rounded-[40px] p-8 px-12" style={{ marginTop: '230px' }}>
                         <Box className="flex justify-between w-1/4 gap-x-4" >
-                        <Card3DEffect rotationIntensity={30} perspective={1000}>
+                        
                             <CarouselPart data={PARTDATA} /> {/* small carousel */}
                             <Box className='flex flex-col h-[100px] justify-around'>
+                                <Card3DEffect>
                                 <Typography
                                     variant="h3"
                                     color="#283C28"
@@ -668,21 +669,23 @@ const HomePage = () => {
                                     color="#17181C"
                                     sx={{
                                         // width: '90%',
-                                        fontWeight: 300,
+                                        fontWeight: 500,
                                         alignContent: 'flex-start',
+                                        lineHeight: '1.6',
                                         fontFamily: 'var(--font-montserrat)',
                                         fontSize: {
-                                            xs: "7px",
+                                            xs: "8px",
                                             sm: "10px",  // Small screens
-                                            md: "10px",  // Medium screens
-                                            lg: "12px"
+                                            md: "12px",  // Medium screens
+                                            lg: "15px"
                                         }
                                     }}
                                 >
                                     Available in our freeform style, the Charlotte sandstone is made up of beautiful soft hues such as cream, yellow and pink.
                                 </Typography>
+                                </Card3DEffect>
                             </Box>
-                            </Card3DEffect>
+                          
 
                         </Box>
                         <Box className="flex justify-center w-full">
@@ -719,7 +722,7 @@ const HomePage = () => {
                                 <Link href={'/visualizer/Chimney'}><GreenCustomButton label={'Try Now!'} iconSrc={'/images/icons/Vector.svg'} /></Link>
                             </Box>
                         </Box>
-                        : <></>
+                          <></>
                     </Box>
                 }
 

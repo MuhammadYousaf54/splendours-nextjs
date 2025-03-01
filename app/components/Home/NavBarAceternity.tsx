@@ -9,31 +9,30 @@ export default  function NavBarAceternity({ className }: { className?: string })
   const [active, setActive] = useState<string | null>(null);
   return (
     <div
-      className={cn("fixed top-10 inset-x-0 max-w-2xl mx-auto z-50", className)}
+      className={cn("sticky top-10 inset-x-0 max-w-3xl mx-auto z-50", className)}
     >
       <Menu setActive={setActive}>
       
         <MenuItem setActive={setActive} active={active} item="Home">
-        <div className="flex flex-col space-y-4 text-sm">
-
-        <HoveredLink href="/pavving">Pavving</HoveredLink>
-        <HoveredLink href="/walling">Walling</HoveredLink>
-
-        </div>
-
-        </MenuItem>
-    
-        <MenuItem setActive={setActive} active={active} item="Services">
-          <div className="flex flex-col space-y-4 text-sm">
-            <HoveredLink href="/projects">Projects</HoveredLink>
-            <HoveredLink href="/services">Our Service</HoveredLink>
-            <HoveredLink href="/portfolio">Portfolio</HoveredLink>
-            <HoveredLink href="/gallery">Gallery</HoveredLink>
-            
-          </div>
+        <HoveredLink href="/">Home</HoveredLink>
         </MenuItem>
 
-        <MenuItem setActive={setActive} active={active} item="Products">
+        <MenuItem setActive={setActive} active={active} item="Walling">
+        <HoveredLink href="https://staging.splendourinstone.com.au/walling/">Walling</HoveredLink>
+        </MenuItem>
+
+        <MenuItem setActive={setActive} active={active} item="Paving">
+        <HoveredLink href="https://staging.splendourinstone.com.au/paving/">Paving</HoveredLink>
+        </MenuItem>
+        <MenuItem setActive={setActive} active={active} item="CobbleStone">
+        <HoveredLink href="https://staging.splendourinstone.com.au/cobble-stones/">CobbleStone</HoveredLink>
+        </MenuItem>
+
+        <MenuItem setActive={setActive} active={active} item="Service">
+        <HoveredLink href="/services">Service</HoveredLink>
+        </MenuItem>
+
+        <MenuItem setActive={setActive} active={active} item="Projects">
           <div className="  text-sm grid grid-cols-2 gap-10 p-4">
             <ProductItem
               title="Walling"
@@ -61,17 +60,31 @@ export default  function NavBarAceternity({ className }: { className?: string })
             />
           </div>
         </MenuItem>
-       
-        <MenuItem setActive={setActive} active={active} item="Blog">
-        <HoveredLink href="/faq">FAQ</HoveredLink>
 
+        <MenuItem setActive={setActive} active={active} item="About">
+        <HoveredLink href="/about">Service</HoveredLink>
         </MenuItem>
+
+    
+        <MenuItem setActive={setActive} active={active} item="ContactUs">
+          <div className="flex flex-col space-y-4 text-sm">
+            <HoveredLink href="/portfolio">Projects</HoveredLink>
+            <HoveredLink href="/services">Our Service</HoveredLink>
+            <HoveredLink href="/portfolio">Portfolio</HoveredLink>
+            <HoveredLink href="/gallery">Gallery</HoveredLink>
+            
+          </div>
+        </MenuItem>
+
+      
+       
+       
 
         <MenuItem setActive={setActive} active={active} item="Consultation">
           <div className="flex flex-col space-y-4 text-sm">
           <HoveredLink href="/faq">FAQ</HoveredLink>
           <HoveredLink href="/contact">Contact</HoveredLink>
-          <HoveredLink href="/blog">Blog</HoveredLink>
+          <HoveredLink href="/">Blog</HoveredLink>
           </div>
         </MenuItem>
       </Menu>
@@ -80,7 +93,7 @@ export default  function NavBarAceternity({ className }: { className?: string })
 }
 
 import { motion } from "framer-motion";
-import Link, { LinkProps } from "next/link";
+import Link,{LinkProps} from "next/link";
 import Image from "next/image";
 
 const transition = {
@@ -149,7 +162,7 @@ export const Menu = ({
   return (
     <nav
       onMouseLeave={() => setActive(null)} // resets the state
-      className="relative rounded-full border border-transparent dark:bg-black dark:border-white/[0.2] bg-customColor shadow-input flex justify-center space-x-4 px-8 py-6 "
+      className="relative rounded-full border border-transparent dark:bg-black dark:border-white/[0.2] bg-customColor shadow-input flex justify-center space-x-4 px-8 py-6  "
     >
       {children}
     </nav>
@@ -187,6 +200,7 @@ export const ProductItem = ({
     </Link>
   );
 };
+
 interface HoveredLinkProps extends LinkProps {
   children: ReactNode;
   className?: string;

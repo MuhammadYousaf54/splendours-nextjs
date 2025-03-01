@@ -15,21 +15,17 @@ export default  function NavBarAceternity({ className }: { className?: string })
       
         <MenuItem setActive={setActive} active={active} item="Home">
         <HoveredLink href="/">Home</HoveredLink>
-
-
-        </MenuItem>
-    
-        <MenuItem setActive={setActive} active={active} item="Services">
-          <div className="flex flex-col space-y-4 text-sm">
-            <HoveredLink href="/portfolio">Projects</HoveredLink>
-            <HoveredLink href="/services">Our Service</HoveredLink>
-            <HoveredLink href="/portfolio">Portfolio</HoveredLink>
-            <HoveredLink href="/gallery">Gallery</HoveredLink>
-            
-          </div>
         </MenuItem>
 
-        <MenuItem setActive={setActive} active={active} item="Products">
+        <MenuItem setActive={setActive} active={active} item="Walling">
+        <HoveredLink href="/">Walling</HoveredLink>
+        </MenuItem>
+
+        <MenuItem setActive={setActive} active={active} item="Paving">
+        <HoveredLink href="/">Paving</HoveredLink>
+        </MenuItem>
+
+        <MenuItem setActive={setActive} active={active} item="Projects">
           <div className="  text-sm grid grid-cols-2 gap-10 p-4">
             <ProductItem
               title="Walling"
@@ -57,11 +53,20 @@ export default  function NavBarAceternity({ className }: { className?: string })
             />
           </div>
         </MenuItem>
-       
-        <MenuItem setActive={setActive} active={active} item="Blog">
-        <HoveredLink href="/faq">FAQ</HoveredLink>
-
+    
+        <MenuItem setActive={setActive} active={active} item="Contact Us">
+          <div className="flex flex-col space-y-4 text-sm">
+            <HoveredLink href="/portfolio">Projects</HoveredLink>
+            <HoveredLink href="/services">Our Service</HoveredLink>
+            <HoveredLink href="/portfolio">Portfolio</HoveredLink>
+            <HoveredLink href="/gallery">Gallery</HoveredLink>
+            
+          </div>
         </MenuItem>
+
+      
+       
+       
 
         <MenuItem setActive={setActive} active={active} item="Consultation">
           <div className="flex flex-col space-y-4 text-sm">

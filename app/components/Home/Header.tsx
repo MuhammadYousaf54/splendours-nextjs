@@ -300,7 +300,7 @@ const Header: React.FC = () => {
                             </Typography>
                         </Link>
                     </Box>
-                    {/* <Box className=" text-center">
+                    <Box className=" text-center">
                         <Link href="/about">
                             <Typography
                                 variant="h3"
@@ -349,7 +349,7 @@ const Header: React.FC = () => {
                                 CobbleStone
                             </Typography>
                         </Link>
-                    </Box> */}
+                    </Box>
                     <Box className=" text-center">
                         <Link href="/portfolio">
                             <Typography
