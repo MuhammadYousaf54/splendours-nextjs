@@ -56,10 +56,8 @@ export default  function NavBarAceternity({ className }: { className?: string })
     
         <MenuItem setActive={setActive} active={active} item="Contact Us">
           <div className="flex flex-col space-y-4 text-sm">
-            <HoveredLink href="/portfolio">Projects</HoveredLink>
-            <HoveredLink href="/services">Our Service</HoveredLink>
-            <HoveredLink href="/portfolio">Portfolio</HoveredLink>
-            <HoveredLink href="/gallery">Gallery</HoveredLink>
+          <HoveredLink href="/contact">Contact</HoveredLink>
+
             
           </div>
         </MenuItem>
@@ -72,7 +70,6 @@ export default  function NavBarAceternity({ className }: { className?: string })
           <div className="flex flex-col space-y-4 text-sm">
           <HoveredLink href="/faq">FAQ</HoveredLink>
           <HoveredLink href="/contact">Contact</HoveredLink>
-          <HoveredLink href="/">Blog</HoveredLink>
           </div>
         </MenuItem>
       </Menu>
