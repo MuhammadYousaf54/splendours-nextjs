@@ -12,6 +12,8 @@ export default {
   theme: {
     fontFamily: {
       sans: ["Montserrat", "sans-serif"],
+      hanken: ['Hanken Grotesk'],
+
     },
     extend: {
       keyframes: {

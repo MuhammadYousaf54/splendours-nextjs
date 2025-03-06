@@ -24,6 +24,8 @@ import PhaseCarousel from "../../PhaseCarousel";
 import CalendarControl from "../../CalendarControl";
 import MonthYearPicker from "./MonthCalendar";
 import Image from "next/image";
+import { GreenBtnBooking } from "../../Buttons/GreenBtnBooking";
+// import { GreenAnimationBooking } from "./GreenAnimationBooking";
 // import Image from "next/image";
 
 const Booking: React.FC = () => {
@@ -735,59 +737,98 @@ const Booking: React.FC = () => {
                         >
                             {/* Book Button */}
                             <Box
-                                className="flex justify-center md:justify-end"
-                                sx={{
-                                    width: "100%",
-                                }}
-                            >
-                                <button
-                                    style={{
-                                        padding: "10px 20px",
-                                        backgroundColor: "#283C28",
-                                        color: "#DCC5BD",
-                                        border: "none",
-                                        borderRadius: "50px",
-                                        cursor: "pointer",
-                                        display: "flex",
-                                        alignItems: "center",
-                                        gap: "8px",
-                                    }}
-                                    className="lg:w-[260px] lg:h-[60px] lg:justify-between lg:text-[15px]"
-                                    onClick={handleOpenDialog}
-                                >
-                                    Book
-                                    <Image src="/images/icons/Vector.svg" alt="Book" height={32 } width={32} />
-                                </button>
-                            </Box>
+  className="flex justify-center md:justify-end"
+  sx={{
+    width: "100%",
+  }}
+>
+    <GreenBtnBooking  onClick={handleOpenDialog}  label="Book"  icon="/images/icons/Vector.svg" className="px-2">
+  <button
+    style={{
+      padding: "10px 20px",
+      backgroundColor: "#283C28", // Button background color
+      color: "#DCC5BD", // Text color
+      border: "none",
+      borderRadius: "50px",
+      cursor: "pointer",
+      display: "flex",
+      alignItems: "center",
+      gap: "8px",
+      position: "relative", // Required for absolute positioning of the icon
+      overflow: "hidden", // Ensure the icon doesn't overflow the button
+      transition: "all 0.3s ease", // Smooth transition for all properties
+    }}
+    className="lg:w-[260px] lg:h-[60px] lg:justify-between lg:text-[15px]"
+    onClick={handleOpenDialog}
+  >
+    {/* Text */}
+    <span
+      style={{
+        transition: "opacity 0.3s ease, transform 0.3s ease", // Smooth fade-out and slide-left
+      }}
+      className="hover:opacity-0 hover:-translate-x-2" // Fade out and slide left on hover
+    >
+      Book
+    </span>
+
+    {/* Icon */}
+    <Image
+      src="/images/icons/Vector.svg"
+      alt="Book"
+      height={32}
+      width={32}
+      style={{
+        position: "absolute", // Position the icon absolutely within the button
+        right: "20px", // Adjust position as needed
+        opacity: 0, // Start with the icon hidden
+        transition: "opacity 0.3s ease, transform 0.3s ease", // Smooth fade-in and slide-in
+      }}
+      className="hover:opacity-100 hover:translate-x-0" // Fade in and slide in on hover
+    />
+  </button>
+  </GreenBtnBooking>
+</Box>
 
                             {/* Action Buttons */}
                             <Box
-                                className="flex flex-col md:flex-row gap-3"
+                                className="flex flex-col md:flex-row gap-8"
                                 sx={{
                                     justifyContent: { xs: "center", md: "space-between" },
                                     alignItems: { xs: "center", md: "flex-start" },
                                 }}
                             >
-                                <button
-                                    style={{
-                                        padding: "10px 20px",
-                                        backgroundColor: "#283C28",
-                                        color: "#DCC5BD",
-                                        border: "none",
-                                        borderRadius: "50px",
-                                        cursor: "pointer",
-                                        display: "flex",
-                                        alignItems: "center",
-                                        gap: "8px",
-                                    }}
-                                    className="lg:w-[222px] lg:h-[54px] lg:justify-between lg:text-[15px]"
-                                    onClick={handleOpenDialog_VideoCall}
-                                >
-
-                                    Video Call
-                                    <Image src="/images/icons/VideoCall.svg" alt="Video Call" width={32} height={32} />
-                                </button>
-
+                                <GreenBtnBooking onClick={handleOpenDialog_VideoCall}  label="Video Call"  icon="/images/icons/VideoCall.svg" className="gap-2">
+                            <button
+  style={{
+    padding: "10px 20px",
+    backgroundColor: "#283C28",
+    color: "#DCC5BD",
+    border: "none",
+    borderRadius: "50px",
+    cursor: "pointer",
+    display: "flex",
+    alignItems: "center",
+    gap: "8px",
+    transition: "all 0.3s ease", // Add transition for smooth animation
+  }}
+  className="lg:w-[222px] lg:h-[54px] lg:justify-between lg:text-[15px] hover:gap-4" // Add hover gap for spacing
+>
+  <span style={{ transition: "transform 0.3s ease" }} className="hover:translate-x-2">
+    Video Call
+  </span>
+           <Image
+                             src="/images/icons/VideoCall.svg"
+                             alt="Video Call"
+                             width={32}
+                             height={32}
+                             style={{ opacity: 0, transition: "opacity 0.3s ease, transform 0.3s ease" }} // Add opacity and transform transition
+                             className="hover:opacity-100 hover:translate-x-0"
+                                           />
+                            </button>
+                            </GreenBtnBooking>
+                            
+                            
+                            <GreenBtnBooking  onClick={handleOpenDialog_Call} label="Call" icon="/images/icons/Call.svg" className="px-2">
                                 <button
                                     style={{
                                         padding: "10px 20px",
@@ -806,7 +847,8 @@ const Booking: React.FC = () => {
                                     <Image src="/images/icons/Call.svg" alt="Call"  width={32} height={32}/>
 
                                 </button>
-
+                                </GreenBtnBooking>
+                                <GreenBtnBooking  onClick={handleOpenDialog_Email} label="Email" icon="/images/icons/Email.svg" className="px-2">
                                 <button
                                     style={{
                                         padding: "10px 20px",
@@ -825,6 +867,7 @@ const Booking: React.FC = () => {
                                     <Image src="/images/icons/Email.svg" alt="Email" width={32} height={32} />
 
                                 </button>
+                                </GreenBtnBooking>
                             </Box>
                         </Box>
                     </Box>

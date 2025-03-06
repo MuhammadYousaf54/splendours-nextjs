@@ -26,6 +26,9 @@ import EnquiryForm from '../components/3dEffects/EnquireFormModal';
 import "./page.module.css"
 import FeaturedCarousel from '../components/FeaturedCarousel';
 import Card3DEffect from '../components/3dEffects/Card3DEffect';
+import { GreenServiceBtn } from './GreenServiceBtn';
+// import { AnimatedModalDemo } from '../components/Buttons/AnimatedModalDemo';
+import { WhiteBtn } from './whiteBtn';
 
 
 const OPTIONS: EmblaOptionsType = { dragFree: true, loop: true }
@@ -1464,7 +1467,9 @@ const ServicesPage = () => {
                                     </Typography>
                                 </Box>
                                 {/* <WhiteCustomButton label={'Enquire Now!'} iconSrc={'/images/icons/Vector.svg'} /> */}
-                                <GreenCustomButton label={'Enquire Now!'} iconSrc={'/images/icons/Vector.svg'} onClick={handleOpenEnquiryForm} />
+                                <Box className={"flex items-start"}>    
+          <GreenServiceBtn label={'Enquire Now!'} icon={'/images/icons/Vector.svg'}  onClick={handleOpenEnquiryForm} />
+                                </Box>
                             </Box>
                         </Box>
 
@@ -1619,8 +1624,8 @@ const ServicesPage = () => {
                                         </Typography>
                                     </Box>
 
-                                    <Box>
-                                        <GreenCustomButton label={'Read more'} iconSrc={'/images/icons/Vector.svg'} />
+                                    <Box className={""}>
+                                        <GreenServiceBtn label={'Read more'} icon={'/images/icons/Vector.svg'} />
                                     </Box>
 
                                 </Box>
@@ -1680,8 +1685,8 @@ const ServicesPage = () => {
                                         </Typography>
                                     </Box>
 
-                                    <Box>
-                                        <GreenCustomButton label={'Read more'} iconSrc={'/images/icons/Vector.svg'} />
+                                    <Box className={""}>
+                                        <GreenServiceBtn label={'Read more'}  icon={'/images/icons/Vector.svg'} />
                                     </Box>
 
                                 </Box>
@@ -1741,8 +1746,8 @@ const ServicesPage = () => {
                                         </Typography>
                                     </Box>
 
-                                    <Box>
-                                        <GreenCustomButton label={'Read more'} iconSrc={'/images/icons/Vector.svg'} />
+                                    <Box className={""}>
+                                        <GreenServiceBtn onClick={() => { }} label={'Read more'} icon={'/images/icons/Vector.svg'} />
                                     </Box>
 
                                 </Box>
@@ -1850,8 +1855,8 @@ const ServicesPage = () => {
 
                             </Typography>
                         </Box>
-                        <Link href={'/contact'} className="flex w-full justify-center py-4">
-                            <WhiteCustomButton label={'Contact Us'} iconSrc={'/images/icons/Vector.svg'} />
+                        <Link href={'/contact'} className="relative flex items-center justify-center pt-4">
+                            <WhiteBtn label={'Contact Us'} icon={'/images/Vector.svg'} />
                         </Link>
                     </Box>
                     }

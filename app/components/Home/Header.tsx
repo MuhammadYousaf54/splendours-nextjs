@@ -7,6 +7,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useMediaQuery } from '@mui/material';
 import NavBarAceternity from './NavBarAceternity';
+// import NavbarOld from './navbarOld';
 
 const Header: React.FC = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -468,8 +469,9 @@ const Header: React.FC = () => {
 
                 </Box>
             </Box> :
+                        // <NavbarOld></NavbarOld>
+
             <NavBarAceternity></NavBarAceternity>
-            
 
             // <Box className={`flex justify-between mr-[1.5vw] w-4/5 ${isMenuOpen ? 'block' : 'hidden'} lg:flex`}>
             //     <Box className="flex  items-center justify-between w-full">

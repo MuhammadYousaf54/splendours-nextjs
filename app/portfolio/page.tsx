@@ -31,6 +31,9 @@ import GreenCustomButton from '../components/GreenCustomButton';
 import OverlappingImageSlider from '../components/Portfolio/InspirationCarousel/InspirationCarousel';
 import OverlappingImageSlider2 from '../components/Portfolio/InspirationCarousel/InspirastionCarousel2';
 import Hover3DWrapper from './Hover3dWrapper';
+// import { GreenAnimationBooking } from '../components/Home/Booking/GreenAnimationBooking';
+// import { GreenBtnBooking } from '../components/Buttons/GreenBtnBooking';
+import { GreenBtn } from './GreenBtn';
 
 
 
@@ -906,10 +909,10 @@ const PortfolioPage = () => {
                                     >
                                         READY TO START YOUR STONE JOURNEY?
                                     </Typography></Box>
-                                <Box className="flex w-full flex-col items-center justify-between gap-4">
-                                    <GreenCustomButton label={'Enquire now!'} iconSrc={'/images/icons/Vector.svg'} onClick={handleOpenEnquiryForm} />
+                                <Box className="flex w-full flex-col items-center justify-between ">
+                                    <GreenBtn label={'Enquire now!'} icon={'/images/icons/Vector.svg'} onClick={handleOpenEnquiryForm} />
                                     <Link href="/contact">
-                                        <GreenCustomButton label={'Contact Us!'} iconSrc={'/images/icons/Vector.svg'} />
+                                        <GreenBtn label={'Contact Us!'} icon={'/images/icons/Vector.svg'} onClick={()=>{}}/>
                                     </Link>
                                 </Box>
                             </Box>
@@ -990,12 +993,13 @@ const PortfolioPage = () => {
                                                 </Link>
                                             </Box>
                                         </Box> :
-                                        <Box className="flex w-full justify-between gap-4">
+                                        <Box className="flex w-full justify-between mr-4 ">
                                             <Box>
-                                                <GreenCustomButton label={'Enquire now!'} iconSrc={'/images/icons/Vector.svg'} onClick={handleOpenEnquiryForm} />
+                                                
                                             </Box>
-                                            <Link href="/contact">
-                                                <GreenCustomButton label={'Contact Us!'} iconSrc={'/images/icons/Vector.svg'} />
+                                            <GreenBtn label={'Enquire now!'} icon={'/images/icons/Vector.svg'} onClick={handleOpenEnquiryForm} />
+                                                <Link href="/contact">
+                                                <GreenBtn label={'Contact Us!'} icon={'/images/icons/Vector.svg'} onClick={()=>{}}/>
                                             </Link>
                                         </Box>}
                                 </Box>

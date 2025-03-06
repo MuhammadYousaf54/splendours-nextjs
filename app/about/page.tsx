@@ -19,6 +19,8 @@ import LivingMobileCarousel from '../components/About/Living/LivingMobileCarouse
 import FooterMobile from '../components/FooterMobile';
 import ShortCustomBrownDivider from '../components/Divider/ShortCustomBrownDivider';
 import EnquiryForm from '../components/3dEffects/EnquireFormModal';
+// import { AnimatedModalDemo } from '../components/Buttons/AnimatedModalDemo';
+import { AboutWhiteBtn } from './AboutwhiteBtn';
 
 const AboutPage = () => {
     // Mobile view (max-width 768px)
@@ -45,33 +47,38 @@ const AboutPage = () => {
 
     return () => clearInterval(interval);
   }, [bimages]);
-
-    const images = {
-        firstBox: [
-          {
-            src: "/images/About/Products/product2.jpg",
-            originalHeight: 457,
-            swappedHeight: 276
-          },
-          {
-            src: "/images/About/Products/product4.jpg",
-            originalHeight: 327,
-            swappedHeight: 508
-          }
-        ],
-        secondBox: [
-          {
-            src: "/images/About/Products/product3.jpg",
-            originalHeight: 327,
-            swappedHeight: 457
-          },
-          {
-            src: "/images/About/Products/product5.jpg",
-            originalHeight: 276,
-            swappedHeight: 276
-          }
-        ]
-      };
+  type Image = {
+    src: string;
+    originalHeight: number;
+    swappedHeight: number;
+    alt: string; // Add the alt property
+  }
+  const images = {
+    firstBox: [
+      {
+        src: "/images/About/Products/product2.jpg",
+        originalHeight: 457,
+        swappedHeight: 276
+      },
+      {
+        src: "/images/About/Products/product4.jpg",
+        originalHeight: 327,
+        swappedHeight: 508
+      }
+    ],
+    secondBox: [
+      {
+        src: "/images/About/Products/product3.jpg",
+        originalHeight: 327,
+        swappedHeight: 457
+      },
+      {
+        src: "/images/About/Products/product5.jpg",
+        originalHeight: 276,
+        swappedHeight: 276
+      }
+    ]
+  };
       useEffect(() => {
         const interval = setInterval(() => {
           setIsSwapped(prev => !prev);
@@ -223,62 +230,67 @@ const AboutPage = () => {
                                 </Box>
                             </Box>
                             <Box className="flex flex-col w-1/4 gap-y-4">
-                                {images.firstBox.map((image) => (
-                                <motion.div
-                                    key={image.src}
-                                    animate={{
-                                    height: isSwapped ? image.swappedHeight : image.originalHeight
-                                    }}
-                                    transition={{ 
-                                    duration: 0.5, 
-                                    ease: "easeInOut" 
-                                    }}
-                                    style={{ 
-                                    width: 350,
-                                    height: isSwapped ? image.swappedHeight : image.originalHeight,
-                                    overflow: 'hidden',
-                                    borderRadius: '20px'
-                                    }}
-                                >
-                                    <Image
-                                    src={image.src}
-                                    alt="Logo"
-                                    width={510}
-                                    height={isSwapped ? image.swappedHeight : image.originalHeight}
-                                    className="rounded-[20px] w-full h-full object-cover"
-                                    />
-                                </motion.div>
-                                ))}
+                            {images.firstBox.map((image) => (
+  <motion.div
+    key={image.src}
+    animate={{
+      height: isSwapped ? image.swappedHeight : image.originalHeight,
+    }}
+    transition={{
+      duration: 0.5,
+      ease: "easeInOut",
+    }}
+    style={{
+      width: '100%', // Use relative width for responsiveness
+      maxWidth: 350, // Constrain maximum width
+      height: isSwapped ? image.swappedHeight : image.originalHeight,
+      overflow: 'hidden',
+      borderRadius: '20px',
+    }}
+    className="w-full" // Tailwind CSS for responsive width
+  >
+    <Image
+      src={image.src}
+      alt={"Descriptive alt text"} // Use a meaningful alt text
+      width={510}
+      height={isSwapped ? image.swappedHeight : image.originalHeight}
+      className="rounded-[20px] w-full h-full object-cover"
+      priority // Add priority if these images are above the fold
+    />
+  </motion.div>
+))}
                             </Box>
 
                             <Box className="flex flex-col w-1/4 gap-y-4">
-                                {images.secondBox.map((image) => (
-                                <motion.div
-                                    key={image.src}
-                                    animate={{
-                                    height: isSwapped ? image.swappedHeight : image.originalHeight
-                                    }}
-                                    transition={{ 
-                                    duration: 0.5, 
-                                    ease: "easeInOut" 
-                                    }}
-                                    style={{ 
-                                    width: 350,
-                                    height: isSwapped ? image.swappedHeight : image.originalHeight,
-                                    overflow: 'hidden',
-                                    borderRadius: '20px'
-                                    }}
-                                >
-                                    <Image
-                                    src={image.src}
-                                    alt="Logo"
-                                    width={510}
-                                    height={isSwapped ? image.swappedHeight : image.originalHeight}
-                                    className="rounded-[20px] w-full h-full object-cover"
-                                    />
-                                </motion.div>
-                                ))}
-
+                            {images.secondBox.map((image) => (
+  <motion.div
+    key={image.src}
+    animate={{
+      height: isSwapped ? image.swappedHeight : image.originalHeight,
+    }}
+    transition={{
+      duration: 0.5,
+      ease: "easeInOut",
+    }}
+    style={{
+      width: '100%', // Use relative width for responsiveness
+      maxWidth: 350, // Constrain maximum width
+      height: isSwapped ? image.swappedHeight : image.originalHeight,
+      overflow: 'hidden',
+      borderRadius: '20px',
+    }}
+    className="w-full" // Tailwind CSS for responsive width
+  >
+    <Image
+      src={image.src}
+      alt={ "Descriptive alt text"} // Use a meaningful alt text
+      width={510}
+      height={isSwapped ? image.swappedHeight : image.originalHeight}
+      className="rounded-[20px] w-full h-full object-cover"
+      priority // Add priority if these images are above the fold
+    />
+  </motion.div>
+))}
                                 <Typography
                                 variant="h6"
                                 color="white"
@@ -2321,10 +2333,10 @@ const AboutPage = () => {
                             >
                               A GALLERY OF SUCCESS: YOUR INSPIRATION AWAITS
                             </Typography>
-                            <Box className="mt-5" sx={{ paddingBottom: '50px' }}>
-                              <WhiteCustomButton 
+                            <Box className="mt-5" sx={{ paddingBottom: '50px', display:"flex" , alignItem:"start" }}>
+                              <AboutWhiteBtn  
                                 label={'Enquire Now!'} 
-                                iconSrc={'/images/icons/Vector.svg'} 
+                                icon={'/images/Vector.svg'} 
                                 onClick={handleOpenEnquiryForm} 
                               />
                             </Box>
@@ -2554,8 +2566,8 @@ const AboutPage = () => {
                                 READY TO CRAFT YOUR STONE MASTERPIECE?
                             </Typography>
                             <Box className="flex w-full justify-start  gap-6">
-                                <WhiteCustomButton label={'Enquire Now!'} iconSrc={'/images/icons/Vector.svg'} onClick={handleOpenEnquiryForm} />
-                                <Link href="/contact"><WhiteCustomButton label={'Contact Us'} iconSrc={'/images/icons/Vector.svg'} /></Link>
+                                <AboutWhiteBtn label={'Enquire Now!'} icon={'/images/Vector.svg'} onClick={handleOpenEnquiryForm} />
+                                <Link href="/contact"><AboutWhiteBtn label={'Contact Us'} icon={'/images/Vector.svg'} /></Link>
                             </Box>
                         </Box>
 

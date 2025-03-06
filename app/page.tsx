@@ -15,6 +15,7 @@ import Carousel from "./components/Carousel";
 import CarouselPart from "./components/CarouselPart";
 import WhiteCustomButton from "./components/WhiteButton";
 import GreenCustomButton from "./components/GreenCustomButton";
+import {AnimatedModalDemo} from './components/Buttons/AnimatedModalDemo'
 import CustomTextField from "./components/CustomTextField";
 import Booking from "./components/Home/Booking/Booking";
 import MeasurementAccordion from "./components/MeasurementAccordion";
@@ -33,7 +34,9 @@ import Footer from "./components/Footer";
 import FooterMobile from "./components/FooterMobile";
 import './embla.css';
 import Card3DEffect from "./components/3dEffects/Card3DEffect";
-import LinkWrapper from "./components/3dEffects/LinkWrapper";
+import { GreenAnimationButton } from "./components/Buttons/GreenAnimationButton";
+// import { WhiteBtn } from "./services/whiteBtn";
+import { AboutWhiteBtn } from "./about/AboutwhiteBtn";
 
 const OPTIONS: EmblaOptionsType = { dragFree: true, loop: true }
 const SLIDE_COUNT = 3
@@ -207,11 +210,9 @@ const HomePage = () => {
                             SPLENDOURS PROJECTS
                         </Typography>
                     </Box>
-                    <Box sx={{ marginTop: isMobile ? '30px' : '0px' }}>
+                    <Box sx={{  bottom: 0, right: 0,  marginTop: isMobile ? '30px' : '0px' , marginleft:"20px" }}>
                         <Link href={'/allProjectViews'} >
-                        <LinkWrapper href="/" previewImage='/images/Linkhoverimages/viewAll.png'>
-                            <WhiteCustomButton label={'View all'} iconSrc={'/images/icons/Vector.svg'} />
-                            </LinkWrapper>
+                            <AnimatedModalDemo label="view all" icon={"images/Vector.svg"} ></AnimatedModalDemo>
                         </Link>
                     </Box>
                 </Box>
@@ -302,7 +303,7 @@ const HomePage = () => {
                         </Box>
                         <Box className="flex justify-center w-full">
                             <Link href={'https://www.splendourinstone.com.au/walling/'}>
-                                <GreenCustomButton label={'View all'} iconSrc={'/images/icons/Vector.svg'} />
+                                <GreenAnimationButton label={'View all'} onClick={() => { }}  icon="'/images/icons/Vector.svg'"></GreenAnimationButton>
                             </Link>
                         </Box>
                     </Box>
@@ -439,12 +440,10 @@ const HomePage = () => {
                                     We believe that in a new age world filled with gadgets, noise and pace that a moment to stop, reflect and connect with something pure
                                 </Typography>
                             </Box>
-                            <Box>
+                            <Box className="flex justify-center ml-5 mr-8 mb-5">
                                 <Link href={'https://www.splendourinstone.com.au/walling/'} passHref>
-                                <LinkWrapper href="/" previewImage='/images/Linkhoverimages/viewAll.png'>
 
-                                    <GreenCustomButton label={'View all'} iconSrc={'/images/icons/Vector.svg'} />
-                                    </LinkWrapper>
+                                    <GreenAnimationButton label={'View all'} icon={'/images/icons/Vector.svg'} className="" />
                                 </Link>
                             </Box>
                         </Box>
@@ -599,7 +598,7 @@ const HomePage = () => {
                                     { label: 'View all', href: '/allvisualizers' },
                                     { label: 'Try Now!', href: '/visualizer/Chimney' },
                                 ].map(({ label, href }, index) => (
-                                    <Box key={index} className="flex">
+                                    <Box key={index} className="flex ">
                                         <Link href={href}>
                                             <WhiteCustomButton label={label} iconSrc={'/images/icons/Vector.svg'} />
                                         </Link>
@@ -627,11 +626,9 @@ const HomePage = () => {
                                 We believe that in a new age world filled with gadgets, noise, and pace that a moment to stop, reflect and
                                 connect with something pure
                             </Typography>
-                            <Box>
+                            <Box className="flex w-full justify-center  ml-10 mb-24">
                                 <Link href={'/allvisualizers'}>
-                                <LinkWrapper href="" previewImage="/images/LinkhoverImages/allvisuallizer.png">
-                                    <WhiteCustomButton label={'View all'} iconSrc={'/images/icons/Vector.svg'} />
-                                    </LinkWrapper>
+                                    <AnimatedModalDemo label={'View all'} icon={'/images/Vector.svg'} ></AnimatedModalDemo>
                                 </Link>
                             </Box>
                         </Box>
@@ -719,7 +716,7 @@ const HomePage = () => {
                                 }}>Tag:  Exclusive</Typography>
                             </Box>
                             <Box>
-                                <Link href={'/visualizer/Chimney'}><GreenCustomButton label={'Try Now!'} iconSrc={'/images/icons/Vector.svg'} /></Link>
+                                <Link href={'/visualizer/Chimney'}><GreenAnimationButton label={'Try Now!'} className="mr-4" icon={'/images/icons/Vector.svg'} ></GreenAnimationButton></Link>
                             </Box>
                         </Box>
                           <></>
@@ -826,10 +823,9 @@ const HomePage = () => {
                             </Box>
                             <Box className="mt-5">
                                 <Link href={'https://www.splendourinstone.com.au/paving/'} passHref>
-                                <LinkWrapper href="/" previewImage="/images/LinkhoverImages/pavving.png">
 
-                                    <GreenCustomButton label={'View all'} iconSrc={'/images/icons/Vector.svg'} />
-                                    </LinkWrapper>
+                                    <GreenAnimationButton label={'View all'} className="px-2" icon={'/images/icons/Vector.svg'} />
+                                   
                                 </Link>
                             </Box>
                         </Box>
@@ -1118,8 +1114,8 @@ const HomePage = () => {
                 <Box className="w-1/2">
                     <CustomTextField value={email} onChange={(e) => setEmail(e.target.value)} />
                 </Box>
-                <Box className="flex justify-end w-1/4">
-                    <WhiteCustomButton label={'Send'} iconSrc={'/images/icons/Vector.svg'} onClick={handleSubmit} />
+                <Box className="flex justify-end mt-2 w-1/4">
+                    <AboutWhiteBtn label={'Send'} icon={'/images/Vector.svg'} onClick={handleSubmit} />
                 </Box>
                 {/* Success Alert */}
                 <Snackbar open={successAlert} autoHideDuration={6000} onClose={handleAlertClose}>
