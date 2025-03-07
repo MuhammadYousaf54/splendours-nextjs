@@ -303,7 +303,7 @@ const HomePage = () => {
                         </Box>
                         <Box className="flex justify-center w-full">
                             <Link href={'https://www.splendourinstone.com.au/walling/'}>
-                                <GreenAnimationButton label={'View all'} onClick={() => { }}  icon="'/images/icons/Vector.svg'"></GreenAnimationButton>
+                                <GreenAnimationButton label={'View all'} className=""  icon="'/images/icons/Vector.svg'"></GreenAnimationButton>
                             </Link>
                         </Box>
                     </Box>
