@@ -50,7 +50,7 @@ const FaqPage = () => {
     return (
         <Box className="space-y-12">
 
-            <Box className="flex items-center w-full px-3" sx={{ height: '15vh' }}>
+            <Box className="flex items-center w-full px-3"  sx={{ height: isMobile ? '15vh' : '40vh' }}>
                 <Header />
             </Box>
 

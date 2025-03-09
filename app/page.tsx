@@ -37,6 +37,7 @@ import Card3DEffect from "./components/3dEffects/Card3DEffect";
 import { GreenAnimationButton } from "./components/Buttons/GreenAnimationButton";
 // import { WhiteBtn } from "./services/whiteBtn";
 import { AboutWhiteBtn } from "./about/AboutwhiteBtn";
+// import SplendoursOldHeader from "./components/Home/SplendoursOldHeader";
 
 const OPTIONS: EmblaOptionsType = { dragFree: true, loop: true }
 const SLIDE_COUNT = 3
@@ -303,7 +304,7 @@ const HomePage = () => {
                         </Box>
                         <Box className="flex justify-center w-full">
                             <Link href={'https://www.splendourinstone.com.au/walling/'}>
-                                <GreenAnimationButton label={'View all'} className=""  icon="'/images/icons/Vector.svg'"></GreenAnimationButton>
+                                <GreenAnimationButton label={'View all'} className=""  icon="/images/icons/Vector.svg"></GreenAnimationButton>
                             </Link>
                         </Box>
                     </Box>

@@ -3,7 +3,7 @@
 // app/about/page.tsx
 
 import React, { useState, useEffect } from 'react';
-import { useMediaQuery } from 'react-responsive';
+import useMediaQuery from '@mui/material/useMediaQuery';
 import Link from 'next/link';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -49,8 +49,7 @@ const imageSetsDeskTop = [
 
 const ServicesPage = () => {
     // Mobile view (max-width 768px)
-    const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
-
+    const isMobile = useMediaQuery("(max-width: 768px)"); // Mobile breakpoint
     // const [currentSetIndex, setCurrentSetIndex] = useState(0);
     const [currentSetIndexDeskTop, setCurrentSetIndexDeskTop] = useState(0);
 
@@ -115,7 +114,7 @@ const ServicesPage = () => {
             <EnquiryForm open={isEnquiryFormOpen} handleClose={handleCloseEnquiryForm} />
             <Box >
 
-                <Box className="flex items-center w-full px-3" sx={{ height: '15vh' }}>
+                <Box className="flex items-center w-full px-2" sx={{height: isMobile ? '15vh' : '40vh' }}>
                     <Header />
                 </Box>
 

@@ -128,9 +128,10 @@ const Home = () => {
                     },
                 }}
             >
-                <Box className="flex items-center w-full" sx={{ position: isMobile ? 'fixed' : '', zIndex: 50, top: 0, backgroundColor: isMobile ? '#283C28' : '', height: isMobile ? '15vh' : isTablet ? '18vh' : '20vh' }}>
+                    <Box className="flex items-center w-full" sx={{ position: isMobile ? 'fixed' : '', zIndex: 50, top: 0, backgroundColor: isMobile ? '#283C28' : '', height: isMobile ? '15vh' : isTablet ? '18vh' : '40vh' }}>
                     <Header />
                 </Box>
+               
 
                 <Box
                     className="relative flex items-center w-full"

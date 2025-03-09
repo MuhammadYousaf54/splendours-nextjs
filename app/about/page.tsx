@@ -91,7 +91,7 @@ const AboutPage = () => {
     return (
         <>
             <EnquiryForm open={isEnquiryFormOpen} handleClose={handleCloseEnquiryForm} />
-            <Box className="flex items-center w-full top-0" sx={{ backgroundColor: isMobile ? '#283C28' : '', position: isMobile ? 'fixed' : '', zIndex: 50, height: isMobile ? '15vh' : '20vh', paddingX: isMobile ? 2 : 0 }}>
+            <Box className="flex items-center w-full top-0" sx={{ backgroundColor: isMobile ? '#283C28' : '', position: isMobile ? 'fixed' : '', zIndex: 50, height: isMobile ? '15vh' : '40vh', paddingX: isMobile ? 2 : 0 }}>
                 <Header />
             </Box>
             <Box sx={{ marginTop: isMobile ? '15vh' : 0 }}>

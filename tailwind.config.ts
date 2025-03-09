@@ -74,6 +74,8 @@ export default {
         foreground: "var(--foreground)",
         customColor: "#DBC6BC",
         color: "#283C28",
+        secondary: "#233823",
+        border: "#272C30"
       },
       boxShadow: {
         input: `0px 2px 3px -1px rgba(0,0,0,0.1), 0px 1px 0px 0px rgba(25,28,33,0.02), 0px 0px 0px 1px rgba(25,28,33,0.08)`,

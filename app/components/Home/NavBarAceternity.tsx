@@ -39,7 +39,7 @@ export default  function NavBarAceternity({ className }: { className?: string })
             <ProductItem
               title="All Bricks"
               href="https://www.splendourinstone.com.au/reclaimed-bricks/"
-              src="/images/navbarImages/bricks/bricks4.png"
+              src="/images/navbarImages/bricks/bricks4.jpg"
              description="FIND THE Bricks PRODUCT INSPIRATION FOR YOUR PROJECT"
             />
           </div>
@@ -126,7 +126,7 @@ The Himalayan Limestone is a versatile paver that embodies natural elegance and 
             <ProductItem
               title="All CobbleStone"
               href="https://staging.splendourinstone.com.au/cobble-stones/"
-              src="/images/navbarimages/stone/product4.png"
+              src="/images/navbarimages/stone/stone.jpg"
               description="Find All Products related to Cobble Stone "
             />
           </div>
@@ -263,8 +263,8 @@ export const ProductItem = ({
     <Link href={href} className="flex space-x-2">
       <Image
         src={src}
-        width={100}
-        height={40}
+        width={150}
+        height={50}
         alt={title}
         className="flex-shrink-0 rounded-md shadow-2xl"
       />
