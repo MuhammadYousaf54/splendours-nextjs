@@ -464,7 +464,7 @@ const Header: React.FC = () => {
 
                 </Box>
             </Box> : 
-            <Box className={`flex justify-center w-full h-full ${isMenuOpen ? 'block' : 'hidden'} lg:flex`}>
+            <Box className={`flex justify-center top-0 w-full h-full ${isMenuOpen ? 'block' : 'hidden'} lg:flex`}>
             <SplendoursOldHeader></SplendoursOldHeader>
           </Box>}
 
