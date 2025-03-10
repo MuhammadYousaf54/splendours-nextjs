@@ -139,7 +139,7 @@ const Footer = () => {
             <Box className="flex w-1/2">
                 <ul className="space-y-3" style={{ listStyleType: 'disc', paddingLeft: '20px', color: '#283C28' }}>
                     <li>
-                        <Link href="https://www.splendourinstone.com.au/gallery/">
+                        <Link href="https://www.splendourinstone.com.au/blog/">
                             <Typography
                                 variant="h4"
                                 color="#283C28"
@@ -301,7 +301,7 @@ const Footer = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link href="/faq">
+                        <Link href="/https://www.splendourinstone.com.au/consultation/ ">
                             <Typography
                                 variant="h4"
                                 color="#283C28"
